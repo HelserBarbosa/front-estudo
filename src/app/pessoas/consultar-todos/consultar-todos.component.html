@@ -1,0 +1,14 @@
+<section>
+  <div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading">Pessoas</div>
+
+    <table class="table">
+      <div *ngFor="let pessoa of pessoas">
+        <li class="list-group-item" pessoa="pessoa">{{pessoa.nome}}
+          <button type="button" class="btn btn-primary btn-xs" (click)="deletePessoa(pessoa.id)">delete</button>
+        </li>
+      </div>
+    </table>
+  </div>
+</section>
