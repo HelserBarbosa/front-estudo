@@ -18,12 +18,12 @@ export class CadastrarPessoaComponent implements OnInit {
   }
 
   cadastrarPessoa(){
-    if(!this.validarNome()){
+    if(this.pessoaNome){
       this.pessoaService.postPessoa({nome : this.pessoaNome, idade : this.pessoaIdade}).subscribe(() => this.route.navigate(['/pessoas']))
     }
   }
 
-  validarNome() : boolean {
-    return this.pessoaNome === "" || this.pessoaNome === null
+  validarNome() : boolean{
+    return !this.pessoaNome 
   }
 }

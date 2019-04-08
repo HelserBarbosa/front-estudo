@@ -7,6 +7,7 @@
       <div *ngFor="let pessoa of pessoas">
         <li class="list-group-item" pessoa="pessoa">{{pessoa.nome}}
           <button type="button" class="btn btn-primary btn-xs" (click)="deletePessoa(pessoa.id)">delete</button>
+          <button type="button" class="btn btn-primary btn-xs" (click)=goToVisualizar(pessoa.id)>ver</button>
         </li>
       </div>
     </table>

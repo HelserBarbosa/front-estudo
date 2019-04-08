@@ -15,6 +15,7 @@ import { PessoasService } from './pessoas/pessoas.service';
 import { FormsModule } from '@angular/forms';
 import { ConsultarTodosComponent } from './pessoas/consultar-todos/consultar-todos.component';
 import { CadastrarPessoaComponent } from './pessoas/cadastrar-pessoa/cadastrar-pessoa.component';
+import { PessoasDetailsComponent } from './pessoas/consultar-todos/pessoas-details/pessoas-details.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { CadastrarPessoaComponent } from './pessoas/cadastrar-pessoa/cadastrar-p
     PessoasComponent,
     ConsultarTodosComponent,
     CadastrarPessoaComponent,
+    PessoasDetailsComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,34 +1,41 @@
 {
   "pessoas": [
     {
-      "id": 1,
-      "nome": "Helder",
-      "idade": 24
-    },
-    {
-      "id": 2,
-      "nome": "Ted",
-      "idade": 28
-    },
-    {
       "id": 3,
       "nome": "Kevinho",
-      "idade": 20
+      "idade": 20,
+      "funcao" : "front"
     },
     {
       "nome": "Pablicio",
       "idade": "28",
-      "id": 4
+      "id": 4,
+      "funcao" : "front"
     },
     {
       "nome": "Zé",
       "idade": "30",
-      "id": 5
+      "id": 5,
+      "funcao" : "back"
     },
     {
-      "nome": "Panda",
-      "idade": "25",
-      "id": 6
+      "nome": "Diguinho",
+      "idade": "23",
+      "id": 6,
+      "funcao" : "back"
+    },
+    {
+      "nome": "Ted",
+      "idade": "28",
+      "id": 7,
+      "funcao" : "teste"
+      
+    },
+    {
+      "nome": "23123",
+      "idade": "4124",
+      "id": 8,
+      "funcao" : "teste"
     }
   ]
 }

@@ -8,7 +8,6 @@
       <label for="exampleInputPassword1">Idade</label>
       <input  name="pessoaIdade" type="text" class="form-control" id="exampleInputPassword1" placeholder="Idade" [(ngModel)]="pessoaIdade">
     </div>
-    <button type="submit" class="btn btn-default" (click)="cadastrarPessoa()">Submit</button>
-    <div class="alert alert-danger" role="alert" *ngIf="validarNome()">O nome é obrigatório</div>
+    <button type="submit" class="btn btn-default" (click)="cadastrarPessoa()">Cadastrar</button>
   </form>
 </section>
