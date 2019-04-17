@@ -12,11 +12,10 @@ import { HomeComponent } from './home/home.component';
 import { PessoasComponent } from './pessoas/pessoas.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PessoasService } from './pessoas/pessoas.service';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ConsultarTodosComponent } from './pessoas/consultar-todos/consultar-todos.component';
 import { CadastrarPessoaComponent } from './pessoas/cadastrar-pessoa/cadastrar-pessoa.component';
 import { PessoasDetailsComponent } from './pessoas/consultar-todos/pessoas-details/pessoas-details.component';
-
 
 @NgModule({
   declarations: [
@@ -33,6 +32,7 @@ import { PessoasDetailsComponent } from './pessoas/consultar-todos/pessoas-detai
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),
     ModalModule.forRoot()

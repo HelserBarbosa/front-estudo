@@ -12,6 +12,8 @@ export class ConsultarTodosComponent implements OnInit {
 
   pessoas : PessoaConsulta[]
 
+  
+
   constructor(private pessoasService : PessoasService,
               private router : Router) { }
 

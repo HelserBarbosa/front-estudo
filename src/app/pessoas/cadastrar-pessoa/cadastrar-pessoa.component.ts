@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PessoasService } from '../pessoas.service';
 import { Router } from '@angular/router';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'ini-cadastrar-pessoa',
@@ -9,21 +10,23 @@ import { Router } from '@angular/router';
 })
 export class CadastrarPessoaComponent implements OnInit {
 
-  pessoaNome : string;
-  pessoaIdade : number;
+  cadastrarForm: FormGroup
 
-  constructor(private pessoaService : PessoasService, private route : Router) { }
+  constructor(private pessoaService: PessoasService, private route: Router, private fb: FormBuilder) { }
 
   ngOnInit() {
+    this.iniciarFormulario()
   }
 
-  cadastrarPessoa(){
-    if(this.pessoaNome){
-      this.pessoaService.postPessoa({nome : this.pessoaNome, idade : this.pessoaIdade}).subscribe(() => this.route.navigate(['/pessoas']))
-    }
+  iniciarFormulario() {
+    this.cadastrarForm = this.fb.group({
+      pessoaNome : ['',Validators.required],
+      pessoaIdade : ['', Validators.required]
+    })
   }
 
-  validarNome() : boolean{
-    return !this.pessoaNome 
+  cadastrarPessoa() {
+      this.pessoaService.postPessoa({ nome: this.cadastrarForm.get("pessoaNome").value, idade: this.cadastrarForm.get("pessoaIdade").value }).subscribe(() => this.route.navigate([' ']))
+    
   }
 }

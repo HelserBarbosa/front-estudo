@@ -12,11 +12,11 @@ import { Pessoa } from 'src/app/pessoas/pessoas.model';
 })
 export class PessoasDetailsComponent implements OnInit {
 
-  pessoa: PessoaById
+  pessoa?: PessoaById
 
   constructor(private pessoaSerivice: PessoasService,
     private activedRouter: ActivatedRoute,
-    private router : Router) { }
+    private router: Router) { }
 
   ngOnInit() {
     this.pessoaSerivice.pessoaById(this.getPathId()).subscribe(pessoa => this.pessoa = pessoa);

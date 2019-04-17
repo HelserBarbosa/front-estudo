@@ -1,10 +1,10 @@
 <form class="form-inline">
     <div class="form-group">
         <label for="exampleInputName2">Nome</label>
-        <input type="text" class="form-control" id="exampleInputName2" [(ngModel)]="pessoa.nome" name="nome">
+        <input [disabled]="true" type="text" class="form-control" id="exampleInputName2" [(ngModel)]="pessoa.nome" name="nome">
     </div>
     <div class="form-group">
         <label for="exampleInputEmail2">Idade</label>
-        <input type="email" class="form-control" id="exampleInputEmail2" [(ngModel)]="pessoa.idade" name="idade">
+        <input [disabled]="true" type="email" class="form-control" id="exampleInputEmail2" [(ngModel)]="pessoa.idade" name="idade">
     </div>
 </form>

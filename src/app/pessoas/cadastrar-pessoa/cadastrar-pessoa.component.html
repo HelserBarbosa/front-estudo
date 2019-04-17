@@ -1,13 +1,15 @@
 <section>
-  <form>
+  <form novalidate="false" [formGroup]="cadastrarForm">
     <div class="form-group">
       <label for="exampleInputEmail1">Nome</label>
-      <input name="pessoaNome" type="email" class="form-control" id="exampleInputEmail1" placeholder="Nome" [(ngModel)]="pessoaNome">
+      <input name="pessoaNome" autocomplete="off" type="email" class="form-control" id="exampleInputEmail1"
+        placeholder="Nome" formControlName="pessoaNome">
     </div>
     <div class="form-group">
       <label for="exampleInputPassword1">Idade</label>
-      <input  name="pessoaIdade" type="text" class="form-control" id="exampleInputPassword1" placeholder="Idade" [(ngModel)]="pessoaIdade">
+      <input name="pessoaIdade" type="number" autocomplete="off" class="form-control"
+        id="exampleInputPassword1" placeholder="Idade" formControlName="pessoaIdade">
     </div>
-    <button type="submit" class="btn btn-default" (click)="cadastrarPessoa()">Cadastrar</button>
+    <button [disabled]="!cadastrarForm.valid" type="submit" class="btn btn-default" (click)="cadastrarPessoa()">Cadastrar</button>
   </form>
 </section>
